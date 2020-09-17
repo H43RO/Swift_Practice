@@ -15,7 +15,7 @@ print(job)
 let const_name: String = "Hyeon Jun"
 print(const_name)
 
-// 기본 데이터 타입
+/* 기본 데이터 타입 */
 
 // Int, Unit
 var integer: Int = -100
@@ -58,4 +58,26 @@ var introduce: String = String() // 빈 문자열 생성
 introduce.append("제 이름은")
 introduce = introduce + " " + name + "입니다."
 print(introduce)
+
+/* 함수 */
+
+func hello(name: String) -> String{
+    return "Hello \(name)!"
+}
+
+let greeting: String = hello(name:"H43RO")
+print(greeting)
+
+func helloWorld() -> String{
+    return "Hello, World!"
+}
+
+print(helloWorld())
+
+func sayHello(myName: String, yourName: String)->String{
+    return "Hello \(yourName)! I'm \(myName)"
+}
+
+print(sayHello(myName: "H43RO", yourName: "JSON"))
+
 
