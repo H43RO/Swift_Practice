@@ -52,7 +52,7 @@ print(alphabetA)
 let 한글변수이름: Character = "ㄱ"
 print(한글변수이름)
 
-//String
+// String
 // 마찬가지로 특문, 한글 등 유니코드 문자 모두 사용 가능
 var introduce: String = String() // 빈 문자열 생성
 introduce.append("제 이름은")
@@ -80,4 +80,15 @@ func sayHello(myName: String, yourName: String)->String{
 
 print(sayHello(myName: "H43RO", yourName: "JSON"))
 
+/* Collection */
 
+// Array
+var names1: Array<String> = ["H43RO", "Yeonju", "LULU"]
+var names2: [String] = ["H43RO", "Yeonju", "LULU"] // Array<String> == [String]
+
+var emptyArray1: [String] = [String]()
+var emptyArray2: [String] = Array<String>()
+var emptyArray3: [String] = []
+
+print(emptyArray1.isEmpty)
+print(names1.count)
