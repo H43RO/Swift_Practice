@@ -105,3 +105,24 @@ names1.removeLast()
 
 print(names1)
 print(names1[1 ... 3])
+
+// Dictionary
+//var numberForName: Dictionary<String, Int> = Dictionary<String, Int>()
+var numberForName: [String: Int] = [String: Int]()
+numberForName = [:] // 빈 딕셔너리 생성
+numberForName = ["H43RO": 100, "LULU": 200, "Kong": 300]
+print(numberForName.isEmpty)
+print(numberForName.count)
+
+print(numberForName["H43RO"])
+print(numberForName["Kong"])
+
+numberForName["LULU"] = 150
+print(numberForName["LULU"])
+
+// 새로운 값 추가
+numberForName["max"] = 999
+print(numberForName["max"])
+
+print(numberForName.removeValue(forKey: "Kong"))
+print(numberForName.removeValue(forKey: "Kong")) // 없는 값 접근 시 nil 출력
