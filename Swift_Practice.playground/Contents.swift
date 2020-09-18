@@ -92,3 +92,16 @@ var emptyArray3: [String] = []
 
 print(emptyArray1.isEmpty)
 print(names1.count)
+print(names2[2])
+
+names1.append(contentsOf: ["john", "max"])
+names1.insert("happy", at: 2)
+names1.insert(contentsOf: ["Minsoo", "Cat"], at: 5)
+
+print(names1)
+
+names1.removeFirst()
+names1.removeLast()
+
+print(names1)
+print(names1[1 ... 3])
