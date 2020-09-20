@@ -216,7 +216,7 @@ protocol ReadWriteSpeakable: Readable, Writable{
     func speak()
 }
 
-class SomeClass: ReadWriteSpeakable{
+class SomeClass: ReadWriteSpeakable{ // read, write, speak 메소드를 모두 구현해야함
     func read() {
         print("Read")
     }
@@ -229,3 +229,25 @@ class SomeClass: ReadWriteSpeakable{
         print("Speak")
     }
 }
+
+// Extension
+// 구조체, 클래스, 열거형, 프로토콜 타입에 새로운 기능을 추가할 수 있음
+// 그렇지만 상속과 다르게 기존 기능을 재정의할 수 없고, 수평적 확장 개념임 ( 모든 타입에 대해 적용 가능하다는 이점이 있다 )
+// Extension 역시 다른 Protocol을 채택할 수 있도록 확장할 수도 있음
+// 실제로 스위프트 표준 라이브러리의 대부분 기능은 익스텐션으로 구현되어 있을만큼 강력한 기능임
+
+extension Int {
+    var isEven: Bool{
+        return self % 2 == 0
+    }
+    
+    var isOdd: Bool {
+        return self % 2 == 1
+    }
+}
+
+
+print(1.isEven)
+print(2.isEven)
+print(3.isOdd)
+print(4.isOdd)
