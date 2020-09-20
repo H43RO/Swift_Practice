@@ -244,10 +244,34 @@ extension Int {
     var isOdd: Bool {
         return self % 2 == 1
     }
+    
+    func multiply(by n: Int) -> Int {
+        return self * n
+    }
 }
-
 
 print(1.isEven)
 print(2.isEven)
 print(3.isOdd)
 print(4.isOdd)
+
+var number: Int = 3
+print(number.isOdd) // true
+print(number.multiply(by: 2)) // 6
+
+extension String {
+    subscript(appendValue: String)->String {
+        return self + appendValue
+    }
+    
+    subscript(repeatCount: UInt) -> String {
+        var str: String = ""
+        for _ in 0..<repeatCount {
+            str += self
+        }
+        return str
+    }
+}
+
+print("abc"["def"])
+print("abc"[3])
