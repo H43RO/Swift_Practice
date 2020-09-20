@@ -200,3 +200,32 @@ let lulu: SwiftPerson = SwiftPerson(name: "LULU", topic: "코딩")
 haero.talk(to: lulu)
 
 // Java, Kotlin 에서 intertace를 상속하는 interface가 있듯, protocol도 상속이 가능하다
+protocol Readable{
+    func read()
+}
+
+protocol Writable{
+    func write()
+}
+
+protocol ReadSpeakable: Readable{
+    func speak()
+}
+
+protocol ReadWriteSpeakable: Readable, Writable{
+    func speak()
+}
+
+class SomeClass: ReadWriteSpeakable{
+    func read() {
+        print("Read")
+    }
+    
+    func write() {
+        print("Write")
+    }
+    
+    func speak() {
+        print("Speak")
+    }
+}
