@@ -275,3 +275,35 @@ extension String {
 
 print("abc"["def"])
 print("abc"[3])
+
+// Extension 을 활용하여 Protocol 의 초기 구현을 할 수도 있음 (중복 코드 방지)
+
+protocol Talk {
+    var topic: String { get set }
+    func talk(to: Self)
+}
+
+// Extension 을 사용한 프로토콜 초기 구현
+extension Talk {
+    func talk(to: Self){
+        print("\(to)! \(topic)")
+    }
+}
+
+// func talk() 를 구현하지 않아도 오류가 안남
+struct PersonStruct: Talk{
+    var topic: String
+    var name: String
+}
+
+// func talk() 초기 구현과 다른 동작을 해야하면 재정의 하면 됨
+struct Monkey: Talk{
+    var topic: String
+    func talk(to: Monkey){
+        print("\(to)! 우끼끼")
+    }
+}
+
+let personStruct = PersonStruct(topic: "Swift", name: "H43RO")
+let hana = PersonStruct(topic: "Internet", name: "Hana")
+personStruct.talk(to: hana)
