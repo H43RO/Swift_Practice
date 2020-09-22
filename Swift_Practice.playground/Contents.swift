@@ -355,7 +355,7 @@ default:
 
 /* 반복문 */
 
-// for-in
+// for-in : For-each 구문과 유사함
 var integers = [1, 2, 3]
 let people = ["H43RO": 10, "Eric": 15, "Mike": 12]
 
@@ -372,7 +372,35 @@ while integers.count > 1 {
     integers.removeLast()
 }
 
-// Repeat-While
+// Repeat-While : Do-While 구문과 유사함
 repeat {
     integers.removeLast()
 } while integers.count > 0
+
+
+/* 열거형 */
+// Camel-Case 로 이름 정의
+// 각 case는 그 자체가 고유의 값
+
+enum Weekday {
+    case mon
+    case tue
+    case wed
+    case thu, fri, sat, sun
+}
+
+// 열거형 타입과 케이스를 모두 사용할 수 있음
+var day: Weekday = Weekday.mon
+
+// 타입이 명확하다면 .케이스 처럼 표현해도 무방
+day = .tue
+print(day)
+
+switch day {
+case .mon, .tue, .wed, .thu:
+    print("평일입니다")
+case Weekday.fri:
+    print("불금 파티!")
+case .sat, .sun:
+    print("신나는 주말!")
+}
