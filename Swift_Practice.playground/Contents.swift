@@ -404,3 +404,25 @@ case Weekday.fri:
 case .sat, .sun:
     print("신나는 주말!")
 }
+
+enum Fruit: Int {
+    case apple = 0
+    case grape = 1
+    case peach
+    // case mango = 0 이런식으로 하면 apple과 원시값이 같으므로 정의할 수 없음
+}
+
+print("Fruit.peach.rawValue == \(Fruit.peach.rawValue)")
+
+enum School: String {
+    case elementary = "초등"
+    case middle = "중등"
+    case high = "고등"
+    case university
+}
+
+print("School.middle.rawValue == \(School.middle.rawValue)")
+
+// 열거형의 원시값 타입이 String 일 때, 원시값이 지정되지 않았다면
+// case 의 이름을 원시값으로 사용하게 됨
+print("School.university.rawValue == \(School.university.rawValue)")
