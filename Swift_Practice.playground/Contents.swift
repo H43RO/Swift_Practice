@@ -307,3 +307,64 @@ struct Monkey: Talk{
 let personStruct = PersonStruct(topic: "Swift", name: "H43RO")
 let hana = PersonStruct(topic: "Internet", name: "Hana")
 personStruct.talk(to: hana)
+
+// 프로토콜 초기 구현이 프로토콜 지향 프로그래밍(POP)의 핵심임
+// POP를 추구함으로써 '다중 상속' 개념이 가능해져 기능의 모듈화가 명확해지고, 구조체 및 열거형 등 다양한 타입의 '상속' 개념이 가능해짐
+
+
+/* 조건문 */
+
+// if-else
+// 스위프트의 조건에는 항상 Bool 타입이 들어와야함
+let someInteger = 100
+
+if someInteger < 100 {
+    print("100 미만")
+} else if someInteger > 100 {
+    print("100 초과")
+} else {
+    print("100")
+}
+
+// switch
+// 정수형 이외에도 대부분 기본 타입 비교를 지원하고, 다양한 패턴과도 응용 가능
+switch someInteger {
+case 0:
+    print("Zero")
+case 1..<100:
+    print("1~99")
+case 100:
+    print("100")
+case 101...Int.max:
+    print("over 100")
+default:
+    print("Unknown")
+}
+
+switch "H43RO" {
+case "jake":
+    print("Jake")
+case "Mina":
+    print("Mina")
+case "H43RO":
+    print("H43RO")
+default:
+    print("Unknown")
+}
+
+
+/* 반복문 */
+
+// for-in
+var integers = [1, 2, 3]
+let people = ["H43RO": 10, "Eric": 15, "Mike": 12]
+
+for integer in integers {
+    print(integer)
+}
+
+for (name, age) in people {
+    print("\(name) : \(age)")
+}
+
+
