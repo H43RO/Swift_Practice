@@ -426,3 +426,37 @@ print("School.middle.rawValue == \(School.middle.rawValue)")
 // 열거형의 원시값 타입이 String 일 때, 원시값이 지정되지 않았다면
 // case 의 이름을 원시값으로 사용하게 됨
 print("School.university.rawValue == \(School.university.rawValue)")
+
+// 원시값을 통한 초기화
+// rawValue를 통해 초기화한 열거형 값은 옵셔널 타입이므로 Fruit 타입이 아님
+let apple: Fruit? = Fruit(rawValue: 0)
+
+// if let 구문을 사용하면 rawValue에 해당하는 케이스를 곧바로 사용 가능
+if let orange: Fruit = Fruit(rawValue: 5) {
+    print("rawValue 5에 해당하는 케이스는 \(orange) 입니다")
+} else{
+    print("rawValue 5에 해당하는 케이스가 없습니당")
+}
+
+// 열거형에 메소드 추가하기
+enum Month {
+    case dec, jan, feb
+    case mar, apr, may
+    case jun, jul, aug
+    case sep, oct, nov
+    
+    func printMessage() {
+        switch self {
+        case .mar, .apr, .may:
+            print("봄!")
+        case .jun, .jul, .aug:
+            print("여름!")
+        case .sep, .oct, .nov:
+            print("가을!")
+        case .dec, .jan, .feb:
+            print("겨울!")
+        }
+    }
+}
+
+Month.mar.printMessage()
