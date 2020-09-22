@@ -367,4 +367,12 @@ for (name, age) in people {
     print("\(name) : \(age)")
 }
 
+// While
+while integers.count > 1 {
+    integers.removeLast()
+}
 
+// Repeat-While
+repeat {
+    integers.removeLast()
+} while integers.count > 0
