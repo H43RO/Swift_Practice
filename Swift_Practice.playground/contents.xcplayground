@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='5.0' target-platform='ios' buildActiveScheme='true'>
-    <timeline fileName='timeline.xctimeline'/>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true'>
+    <pages>
+        <page name='1.DataTypes'/>
+        <page name='2.Collection'/>
+        <page name='3.Function'/>
+        <page name='4.Struct&amp;Class'/>
+        <page name='5.Protocol'/>
+        <page name='6.Extension'/>
+        <page name='7.Conditional'/>
+        <page name='8.Loop'/>
+        <page name='9.Enum'/>
+    </pages>
 </playground>
