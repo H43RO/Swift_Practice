@@ -1,6 +1,5 @@
 
 /* 열거형 */
-// Camel-Case 로 이름 정의
 // 각 case는 그 자체가 고유의 값
 
 enum Weekday {
