@@ -1,4 +1,5 @@
-import UIKit
+
+/* Swift 입문 */
 
 var str = "Hello, playground"
 print(str)
