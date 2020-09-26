@@ -19,3 +19,20 @@ func sayHello(myName: String, yourName: String)->String{
 }
 
 print(sayHello(myName: "H43RO", yourName: "JSON"))
+
+
+// 가변 매개변수 사용 가능
+func sayHelloToFriends(me: String, friends: String...) -> String {
+    return "Hello \(friends)! I'm \(me)!"
+}
+
+print(sayHelloToFriends(me:"H43RO", friends: "haha","eric","wing"))
+
+
+// 데이터 타입으로서의 함수
+func greeting(to friend: String, from me: String) {
+    print("Hello \(friend)! I'm \(me)")
+}
+
+var someFunction: (String, String) -> Void = greeting(to:from:)
+someFunction("eric", "H43RO")
