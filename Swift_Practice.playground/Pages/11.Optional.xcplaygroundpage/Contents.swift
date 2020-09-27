@@ -21,7 +21,42 @@ optionalValue = nil
 
 
 // ? 옵셔널
-var optionalValue: Int? = 100
-optionalValue = nil
+var optionalValues: Int? = 100
+optionalValues = nil
 // 기존 변수와 다른 타입으로 취급하여 연산 불가
 //optionalValue = optionalValue + 1
+
+
+// 옵셔널 추출 - 옵셔널 바인딩
+func printName(_ name: String){
+    print(name)
+}
+
+var myName: String! = "H43RO"
+
+//if let 상수를 생성하여 바인딩 가능
+if let name: String = myName {
+    printName(name)
+} else {
+    print("MyName == nil")
+}
+
+var yourName: String? = nil
+
+// 여러 개의 변수도 다음과 같이 한번에 바인딩 가능
+if let name = myName, let friend = yourName {
+    print("\(name) and \(friend)")
+}
+// yourName 이 nil 이기 때문에 실행되지 않음
+
+yourName = "hana"
+
+if let name = myName, let friend = yourName {
+    print("\(name) and \(friend)")
+}
+
+// 옵셔널 추출 - 강제 추출 (추천하진 않음)
+
+// ! 를 붙여 강제로 값을 추출하되, 값이 없으면 런타임 오류 발생
+printName(myName!)
+
