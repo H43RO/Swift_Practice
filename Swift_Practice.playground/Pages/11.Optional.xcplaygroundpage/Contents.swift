@@ -2,6 +2,8 @@
 /* Optional */
 
 // 암시적 추출 옵셔널
+// nil 을 포함할 수 있는데, 접근할 때 바인딩, 언래핑 과정을 거치지 않아도 됨
+// 하지만 값이 없을 경우 (초기화 안한 경우) 런타임 에러 발생
 var optionalValue: Int! = 100
 
 switch optionalValue {
@@ -28,7 +30,7 @@ optionalValues = nil
 
 
 // 옵셔널 추출 - 옵셔널 바인딩
-func printName(_ name: String){
+func printName(_ name: String){ // 참고로 파라미터 앞에 _ 를 붙이면 호출 시 파라미터 이름을 생략할 수 있음
     print(name)
 }
 
