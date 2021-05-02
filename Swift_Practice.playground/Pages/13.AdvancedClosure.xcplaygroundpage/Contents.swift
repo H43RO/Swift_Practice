@@ -1,4 +1,4 @@
-
+ 
 /* Advanced Closure */
 
 func calculate(a: Int, b: Int, method: (Int, Int) -> Int) -> Int {
@@ -8,7 +8,9 @@ func calculate(a: Int, b: Int, method: (Int, Int) -> Int) -> Int {
 var result: Int
 
 // 후행 클로저
-// 함수의 마지막 전달인자로 클로저가 온다면, 이름을 생략한 후 함수 소괄호 외부에 클로저를 구현할 수 있음
+// 함수의 마지막 전달인자로 클로저가 온다면,
+// 마지막 매개변수 이름을 생략한 후
+// 함수 소괄호 외부에 클로저를 구현할 수 있음
 result = calculate(a: 10, b: 10) { (left: Int, right: Int) -> Int in
     return left + right
 }
@@ -23,13 +25,14 @@ print(result)
 
 // 단축 인자 이름
 // 매개변수 명이 굳이 불필요하면 단축된 인자명을 활용할 수 있음
-// 순선대로 $0, $1 ... 처럼 표현하면 됨
+// 해당 클로저 매개변수 순서대로 $0, $1 ... 처럼 표현하면 됨
 result = calculate(a:10, b: 10, method: {
     return $0 + $1
 })
 print(result)
 
 // 후행 클로저와 함께 사용한다면
+// 더욱 간결한 표현이 가능
 result = calculate(a: 10, b: 10) {
     return $0 + $1
 }

@@ -49,6 +49,7 @@ print("School.university.rawValue == \(School.university.rawValue)")
 
 // 원시값을 통한 초기화
 // rawValue를 통해 초기화한 열거형 값은 옵셔널 타입이므로 Fruit 타입이 아님
+// rawValue 가 없는 케이스가 있을 수 있기 때문에!
 let apple: Fruit? = Fruit(rawValue: 0)
 
 // if let 구문을 사용하면 rawValue에 해당하는 케이스를 곧바로 사용 가능

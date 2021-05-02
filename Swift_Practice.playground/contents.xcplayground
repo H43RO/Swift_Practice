@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' buildActiveScheme='true'>
     <pages>
-        <page name='1.DataTypes'/>
-        <page name='2.Collection'/>
-        <page name='3.Function'/>
-        <page name='4.Struct&amp;Class'/>
-        <page name='5.Protocol'/>
-        <page name='6.Extension'/>
-        <page name='7.Conditional'/>
-        <page name='8.Loop'/>
-        <page name='9.Enum'/>
+        <page name='01.DataTypes'/>
+        <page name='02.Collection'/>
+        <page name='03.Function'/>
+        <page name='04.Struct'/>
+        <page name='06.Protocol'/>
+        <page name='07.Extension'/>
+        <page name='08.Conditional'/>
+        <page name='09.Loop'/>
+        <page name='10.Enum'/>
+        <page name='05.Class'/>
+        <page name='11.Optional'/>
+        <page name='12.Closure'/>
+        <page name='13.AdvancedClosure'/>
+        <page name='14.Value_Reference'/>
+        <page name='15.Property'/>
     </pages>
 </playground>

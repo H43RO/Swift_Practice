@@ -46,6 +46,7 @@ if let name: String = myName {
 var yourName: String? = nil
 
 // 여러 개의 변수도 다음과 같이 한번에 바인딩 가능
+// 하지만 모두 값이 들어있는 상태여야 함
 if let name = myName, let friend = yourName {
     print("\(name) and \(friend)")
 }

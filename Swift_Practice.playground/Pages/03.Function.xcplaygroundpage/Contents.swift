@@ -38,3 +38,11 @@ greeting(to: "Eric", from: "H43RO") // 전달인자 레이블로만 전달 가�
 
 var someFunction: (String, String) -> Void = greeting(to:from:)
 someFunction("eric", "H43RO")
+
+
+// 기본값을 갖는 매개변수는 매개변수 목록 중 가장 맨 뒤쪽에 위치하는 것이 좋음
+func greet(friend: String, me: String = "H43RO") ->Void{
+    print("Hello \(friend), I'm \(me)!")
+}
+
+greet(friend: "LULU")
