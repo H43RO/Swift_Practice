@@ -19,5 +19,6 @@
         <page name='16.Inherit'/>
         <page name='17.Instance'/>
         <page name='18.OptionalChaining'/>
+        <page name='19.TypeCasting'/>
     </pages>
 </playground>
