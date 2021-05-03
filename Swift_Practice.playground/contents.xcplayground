@@ -16,5 +16,8 @@
         <page name='13.AdvancedClosure'/>
         <page name='14.Value_Reference'/>
         <page name='15.Property'/>
+        <page name='16.Inherit'/>
+        <page name='17.Instance'/>
+        <page name='18.OptionalChaining'/>
     </pages>
 </playground>
