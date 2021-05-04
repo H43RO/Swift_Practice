@@ -16,14 +16,24 @@ protocol AnotherProtocol{
     static var anotherTypeProperty: Int { get }
 }
 
-protocol Talkable{ // 내부를 구현하는 것이 아닌 오로지 정의만 함
+// 내부를 구현하는 것이 아닌 오로지 정의만 함
+protocol Talkable{
+    // 프로토콜 요구는 항상 var 키워드 사용
+    // get 은 읽기만 해도 상관이 없다는 뜻이고
+    // get 과 set 을 모두 명시하면
+    // 읽기 쓰기 모두 가능한 프로퍼티여야 함
     var topic: String { get set }
+    
+    // 메소드 요구
     func talk(to: SwiftPerson)
+    
+    // 이니셜라이저 요구
     init(name: String, topic: String)
 }
 
+// SwiftPerson 구조체는 Talkable 프로토콜을 채택함!
 struct SwiftPerson: Talkable{
-    var topic: String // Talkable 프로토콜을 채택하였으므로 topic 프로퍼티 가져야 함
+    var topic: String // 프로토콜 요구 준수
     var name: String
     
     func talk(to: SwiftPerson) { // 마찬가지로 talk 메소드를 가져야 함 (실제 구현해야함)
@@ -71,3 +81,31 @@ class SomeClass: ReadWriteSpeakable{ // read, write, speak 메소드를 모두 �
         print("Speak")
     }
 }
+
+class SuperClass: Readable {
+    func read() { }
+}
+class SubClass: SuperClass, Writable, ReadSpeakable {
+    func write() { }
+    func speak() { }
+}
+
+let sup: SuperClass = SuperClass()
+let sub: SubClass = SubClass()
+var someAny: Any = sup
+someAny is Readable // true
+someAny is ReadSpeakable // false
+someAny = sub
+someAny is Readable // true
+someAny is ReadSpeakable // true
+someAny = sup
+if let someReadable: Readable = someAny as? Readable {
+    someReadable.read()
+} // read
+if let someReadSpeakable: ReadSpeakable = someAny as? ReadSpeakable {
+    someReadSpeakable.speak()
+} // 동작하지 않음
+someAny = sub
+if let someReadable: Readable = someAny as? Readable {
+    someReadable.read()
+} // read
