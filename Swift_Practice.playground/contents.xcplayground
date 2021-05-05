@@ -23,5 +23,6 @@
         <page name='20.Assertion'/>
         <page name='21.ErrorHandling'/>
         <page name='22.HighOrderFunction'/>
+        <page name='23.POP'/>
     </pages>
 </playground>
